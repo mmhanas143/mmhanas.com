@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masudul Hasan Anas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            padding: 50px 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .tagline {
+            font-size: 1.2em;
+            margin: 10px 0 40px;
+            font-weight: 300;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 30px;
+            margin: 10px 0;
+            border-radius: 30px;
+            font-size: 1.2em;
+            transition: all 0.3s;
+        }
+        .links a:hover {
+            background: #fff;
+            color: #ff7e5f;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .language-switcher {
+            margin-top: 20px;
+        }
+        .language-switcher button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #fff;
+            color: #ff7e5f;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .language-switcher button:hover {
+            background-color: #ff7e5f;
+            color: white;
+        }
+    </style>
+    <script>
+        function switchLanguage(language) {
+            const elements = document.querySelectorAll("[data-lang]");
+            elements.forEach(element => {
+                const translations = element.getAttribute("data-lang").split("|");
+                element.innerText = language === "en" ? translations[0] : translations[1];
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 data-lang="MMH ANAS|মাসুদুল হাসান আনাস">Masudul Hasan Anas</h1>
+        <p class="tagline" data-lang="Welcome to my official website!|আমার অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম!">
+            Welcome to my official website!
+        </p>
+    </header>
+
+    <div class="links">
+        <a href="https://www.facebook.com/মোঃ-মাসুদুল-হাসান-আনাস" target="_blank" 
+           data-lang="My Facebook Page|আমার ফেসবুক পেজ">My Facebook Page</a>
+        <a href="https://www.tiktok.com/@mmhanas143" target="_blank" 
+           data-lang="My TikTok ID|আমার টিকটক আইডি">My TikTok ID</a>
+        <a href="https://www.instagram.com/mmhanas143" target="_blank" 
+           data-lang="My Instagram ID|আমার ইনস্টাগ্রাম আইডি">My Instagram ID</a>
+        <a href="https://www.youtube.com/@mmhanas143" target="_blank" 
+           data-lang="My YouTube Channel|আমার ইউটিউব চ্যানেল">My YouTube Channel</a>
+    </div>
+
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('bn')">বাংলা</button>
+    </div>
+
+    <footer>
+        <p data-lang="&copy; 2025 Masudul Hasan Anas. All rights reserved.|&copy; ২০২৫ মাসুদুল হাসান আনাস. সমস্ত অধিকার সংরক্ষিত।">
+            &copy; 2025 Masudul Hasan Anas. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
